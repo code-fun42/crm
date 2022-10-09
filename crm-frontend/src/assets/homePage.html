@@ -1,0 +1,101 @@
+<header class="header">
+    <div class=" header__container">
+        <a class="header__link" href="#">
+            <img class="header__logo" src="src/img/header-logo.svg" alt="SKB.">
+        </a>
+        <form class="header__form" action="../crm-backend/index.js" method="post">
+            <input class="header__input" type="text" placeholder="Введите запрос">
+        </form>
+    </div>
+</header>
+<main class="main">
+    <section class="clients">
+        <div class=" clients__container">
+            <div class=" clients__block">
+                <h1 class="clients__title">Клиенты</h1>
+                <div class="table__container">
+                    <table class="clients__table">
+                        <thead class="clients__thead">
+                            <tr class="clients__tr-title">
+                                <th class="clients__th-title clients__th-title-id">
+                                    <button href="" class="clients__tr-title-btn">
+                                        <span class="clients__tr-title-span">ID</span>
+                                        <span class="clients__tr-title-id-arrow"></span>
+                                    </button>
+                                </th>
+                                <th class="clients__th-title clients__th-title-name">
+                                    <button href="" class="clients__tr-title-btn">
+                                        <span class="clients__tr-title-span">Фамилия Имя Отчество</span>
+                                        <span class="clients__tr-title-name-arrow"></span>
+                                        <span class="clients__tr-title-name-text"></span>
+                                    </button>
+                                </th>
+                                <th class="clients__th-title clients__th-title-date">
+                                    <button href="" class="clients__tr-title-btn">
+                                        <span class="clients__tr-title-span clients__tr-title-span-date">Дата и время
+                                            создания</span>
+                                        <span class="clients__tr-title-date-arrow"></span>
+                                    </button>
+                                </th>
+                                <th class="clients__th-title clients__th-title-editlast">
+                                    <button href="" class="clients__tr-title-btn">
+                                        <span class="clients__tr-title-span clients__tr-title-span-editlast">Последние
+                                            изменения</span>
+                                        <span class="clients__tr-title-editlast-arrow"></span>
+                                    </button>
+                                </th>
+                                <th class="clients__th-title clients__th-title-contacts">
+                                    <span class="clients__tr-title-span">Контакты</span>
+                                </th>
+                                <th class="clients__th-title clients__th-title-action">
+                                    <span class="clients__tr-title-span">Действия</span>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="clients__tbody">
+                            <tr class="client__tbody-tr">
+                                <th class="clients__tbody-th clients__tbody-th-id">123455</th>
+                                <th class="clients__tbody-th clients__tbody-th-name">Скворцов Денис Юрьевич</th>
+                                <th class="clients__tbody-th clients__tbody-th-date">
+                                    <span class="clients__tbody-span">21.02.2021</span>
+                                    <span class="clients__tbody-span-date">12:41</span>
+                                </th>
+                                <th class="clients__tbody-th clients__tbody-th-editlast">
+                                    <span class="clients__tbody-span">21.02.2021</span>
+                                    <span class="clients__tbody-span-editlast">14:50</span>
+                                </th>
+                                <th class="clients__tbody-th clients__tbody-th-contacts">
+                                    <ul class="clients__tbody-list">
+                                        <li class="clients__tbody-item clients__tbody-item-1 clients-vk"></li>
+                                        <li class="clients__tbody-item clients__tbody-item-2 clients-fb"></li>
+                                        <li class="clients__tbody-item clients__tbody-item-3 clients-phone"></li>
+                                        <li class="clients__tbody-item clients__tbody-item-4 clients-mail"></li>
+                                        <li class="clients__tbody-item clients__tbody-item-5">+6</li>
+                                    </ul>
+                                </th>
+                                <th class="clients__tbody-th clients__tbody-th-action">
+                                    <ul class="clients-tbody-list-btn">
+                                        <li class="clients__tbody-item-btn">
+                                            <button
+                                                class="clients__tbody-button clients__tbody-button-edit">Изменить</button>
+                                        </li>
+                                        <li class="clients__tbody-item-btn">
+                                            <button
+                                                class="clients__tbody-button clients__tbody-button-delete">Удалить</button>
+                                        </li>
+                                    </ul>
+                                </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- <div class="clients__load">
+                                <div class="clients__load-circle"></div>
+                            </div> -->
+                </div>
+                <div class="clients__btn-block">
+                    <button class="clients__btn">Добавить клиента</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

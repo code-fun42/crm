@@ -1,0 +1,62 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--body-bg);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  list-style: none;
+}
+
+p {
+  margin: 0;
+}
+
+input {
+  padding: 0;
+  border: none;
+  background-color: inherit;
+}
+
+button {
+  padding: 0;
+  color: inherit;
+  background-color: inherit;
+  border: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}

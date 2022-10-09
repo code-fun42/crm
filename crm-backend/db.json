@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Денис",
+    "surname": "Скворцов",
+    "lastName": "Юрьевич",
+    "contacts": [
+      { "type": "VK", "value": "ыва" },
+      { "type": "Facebook", "value": "ааааа" },
+      { "type": "Phone", "value": "ыва" },
+      { "type": "Email", "value": "ыва" },
+      { "type": "Instagram", "value": "ывавыа" },
+      { "type": "Telegram", "value": "ываыва" }
+    ],
+    "id": "1",
+    "updatedAt": "2021-02-21T14:50:22.327Z",
+    "createdAt": "2021-02-21T12:41:53.253Z"
+  },
+  {
+    "name": "Арсений",
+    "surname": "Куприянов",
+    "lastName": "Валерьевич",
+    "contacts": [
+      { "type": "Phone", "value": "21231213" },
+      { "type": "Email", "value": "+7 (123) 123-13-21" }
+    ],
+    "id": "2",
+    "updatedAt": "2021-02-02T17:01:11.438Z",
+    "createdAt": "2021-01-28T16:40:13.785Z"
+  },
+  {
+    "name": "Людмила",
+    "surname": "Константинопольская",
+    "lastName": "Александровна",
+    "contacts": [
+      { "type": "Facebook", "value": "+7 (345) 232-31-23" },
+      { "type": "Телефон", "value": "+7 (345) 232-31-23" },
+      { "type": "Email", "value": "+7 (345) 232-31-23" }
+    ],
+    "id": "3",
+    "updatedAt": "2021-01-21T14:59:28.335Z",
+    "createdAt": "2021-01-20T14:01:28.335Z"
+  },
+  {
+    "name": "Дмитриевский",
+    "surname": "Олег",
+    "lastName": "Алексеевич",
+    "contacts": [{ "type": "Phone", "value": "+7 (345) 232-31-23" }],
+    "id": "4",
+    "updatedAt": "2021-01-18T16:55:28.335Z",
+    "createdAt": "2021-01-14T16:50:28.335Z"
+  },
+  {
+    "name": "Александрова",
+    "surname": "Татьяна",
+    "lastName": "Павловна",
+    "contacts": [
+      { "type": "VK", "value": "+7 (345) 232-31-23" },
+      { "type": "Phone", "value": "+7 (345) 232-31-23" },
+      { "type": "Email", "value": "+7 (345) 232-31-23" }
+    ],
+    "id": "5",
+    "updatedAt": "2021-01-11T14:11:28.335Z",
+    "createdAt": "2021-01-11T12:45:28.335Z"
+  }
+]
