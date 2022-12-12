@@ -8,7 +8,7 @@ export class TableClients extends CrmComponent {
   constructor($root, options) {
     super($root, {
       name: "TableClients",
-      listeners: ['click'],
+      listeners: ["click"],
       ...options,
     });
     // console.log(options);
@@ -44,15 +44,23 @@ export class TableClients extends CrmComponent {
 
   // события клика
   onClick(event) {
-    const $targetClick = $(event.target)
-    if ($targetClick.class('clients__tbody-button-edit', 'check')) {
-      this.editClient()
+    const $targetClick = $(event.target);
+    if ($targetClick.class("clients__tbody-button-edit", "check")) {
+      this.editClient();
+    } else if ($targetClick.class("clients__btn", "check")) {
+      this.addClient();
     }
   }
 
   // метод редактирование клиента
   editClient() {
-    const $btnEdit = $('.form-edit')
-    $btnEdit.class('visually-hidden', 'remove')
+    const $btnEdit = $(".form-edit");
+    $btnEdit.class("visually-hidden", "remove");
+  }
+
+  // метод добавления клиента
+  addClient() {
+    const $btnEdit = $(".form-add");
+    $btnEdit.class("visually-hidden", "remove");
   }
 }

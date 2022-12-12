@@ -1,11 +1,15 @@
 import { $ } from "../../core/dom.js";
 import { Emitter } from "../../core/Emitter.js";
+import { QueryApi } from "../../core/QueryApi.js";
+import { ValidationForm } from "../../core/ValidationForm.js";
 
 export class Crm {
   constructor(selector, options) {
     this.$el = document.getElementById(selector);
     this.components = options.components || [];
     this.emitter = new Emitter()
+    this.queryApi = new QueryApi()
+    this.validationForm = new ValidationForm()
   }
 
   // метод инициализации компонентов
@@ -13,8 +17,14 @@ export class Crm {
     const $root = $.create("div", "crm");
 
     const componentOptions = {
-      emitter: this.emitter
+      emitter: this.emitter,
+      queryApi: this.queryApi,
+      validationForm: this.validationForm,
     }
+
+    // const optionsHeader = {
+    //   queryApi: this.queryApi
+    // }
 
     this.components = this.components.map((Component) => {
       const $el = $.create("div", Component.className);
@@ -25,8 +35,10 @@ export class Crm {
       // }
       $el.html(component.toHTML());
       $root.append($el);
+      console.log(component);
       return component;
     });
+    console.log(this.components);
 
     return $root;
   }

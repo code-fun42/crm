@@ -1,5 +1,5 @@
 import { CrmComponent } from "../../core/CrmComponent.js";
-import { QueryApi } from "../../core/QueryApi.js";
+// import { QueryApi } from "../../core/QueryApi.js";
 
 export class Header extends CrmComponent {
   static className = "crm__header";
@@ -10,23 +10,9 @@ export class Header extends CrmComponent {
       listeners: ["input", "submit"],
       ...options,
     });
-    this.query = new QueryApi(options.emitter)
+    // console.log({...options});
+    // this.query = new QueryApi(options.emitter)
   }
-
-  // метод по запросу из формы в хедере
-  // async query(queryText) {
-  //   const queryPath = "http://localhost:3000/api/clients?id=12345";
-  //   const queryAPI = await fetch(queryPath, {
-  //     method: "GET",
-  //     headers: {
-  //       "Content-Type": "application/json;charset=utf-8",
-  //     },
-  //   }).then(async (data) => {
-  //     const res = await data.json();
-  //     const clientsArr = res !== [] ? res : false;
-  //     this.emitter.emit("onDownloadsClients", clientsArr);
-  //   });
-  // }
 
   // метод, который возвращает HTML структуру компонента
   toHTML() {
@@ -51,7 +37,23 @@ export class Header extends CrmComponent {
   onInput(event) {
     event.preventDefault();
     const inputValue = event.target.value.trim();
-    this.query.queryStart(inputValue)
+    // this.query.queryStart(inputValue)
+    this.queryToClients(inputValue)
+  }
+  
+  // делаем запрос, использую класс QueryApi
+  async queryToClients(id) {
+    const path = `http://localhost:3000/api/clients/${id}`
+    const res = await this.queryApi.query(path, "GET")
+    console.log(res);
+    if (Array.isArray(res) || typeof res === 'object') {
+      this.sendToTable(res)
+    }
+  }
+
+  // отправляет клиентов в таблицу
+  sendToTable(clients) {
+    this.emitter.emit("onDownloadsClients", clients);
   }
 
   // событие submit

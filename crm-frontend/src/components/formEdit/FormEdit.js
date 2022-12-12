@@ -80,4 +80,9 @@ export class FormEdit extends CrmComponent {
   deleteClient() {
     return ''
   }
+
+  // метод редактирования клиента
+  editClient() {
+    
+  }
 }
