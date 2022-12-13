@@ -4,7 +4,7 @@ export class ValidationForm {
         // this.formMod = 'default'
     }
 
-    returnArrInputs() {
+    returnArrInputs($rootForm) {
         
     }
 

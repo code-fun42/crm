@@ -22,17 +22,9 @@ export class Crm {
       validationForm: this.validationForm,
     }
 
-    // const optionsHeader = {
-    //   queryApi: this.queryApi
-    // }
-
     this.components = this.components.map((Component) => {
       const $el = $.create("div", Component.className);
       const component = new Component($el, componentOptions);
-      // DEBUG
-      // if (component.name) {
-      //   window["c" + component.name] = component;
-      // }
       $el.html(component.toHTML());
       $root.append($el);
       console.log(component);
