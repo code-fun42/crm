@@ -70,32 +70,32 @@ function correctDateTime(strDateTime, mode) {
 // функция, которая готовит данные контактов для шаблонов клиента
 function correctContacts(contacts) {
   console.log(contacts);
-  let contactsTemplate = ''
-  let countContacts = contacts.length
+  let contactsTemplate = "";
+  let countContacts = contacts.length;
   console.log(countContacts);
   if (countContacts > 0) {
-    contacts.forEach(contact => {
+    contacts.forEach((contact) => {
       // const contactTemplate = `
       //   <li class="clients__tbody-item clients__tbody-item-1 clients-vk"></li>
       // `
 
-      const indexContact = contacts.indexOf(contact)
+      const indexContact = contacts.indexOf(contact);
       console.log(indexContact);
 
-      const socnetName = contact.type.toLowerCase()
+      const socnetName = contact.type.toLowerCase();
       console.log(contact);
       // const arrAllSocnet = ['vk', 'facebook', 'phone', 'email']
       // arrAllSocnet.forEach(name => {
-        
+
       // })
       if (indexContact > 3) {
-        const remainderSocnet = countContacts - indexContact + 1
+        const remainderSocnet = countContacts - indexContact + 1;
       }
-      contactsTemplate += `<li class="clients__tbody-item clients-${socnetName}"></li>`
-    })
+      contactsTemplate += `<li class="clients__tbody-item clients-${socnetName}"></li>`;
+    });
   }
   console.log(contactsTemplate);
-  return contactsTemplate
+  return contactsTemplate;
 }
 
 // функция, которая возвращает шаблон с клиентами

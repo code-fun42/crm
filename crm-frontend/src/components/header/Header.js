@@ -16,6 +16,7 @@ export class Header extends CrmComponent {
 
   // метод, который возвращает HTML структуру компонента
   toHTML() {
+    // this.$root.getChildNodes()
     return `
     <div class="header">
         <div class="header__container">

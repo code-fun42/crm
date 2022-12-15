@@ -80,6 +80,10 @@ class Dom {
     }
     return this;
   }
+
+  getChildNodes() {
+    return this.$el.childNodes;
+  }
 }
 
 export function $(selector) {

@@ -7,13 +7,14 @@ export class FormEdit extends CrmComponent {
   constructor($root, options) {
     super($root, {
       name: "FormEdit",
-      listeners: ["click", 'submit'],
+      listeners: ["click", "submit"],
       ...options,
     });
   }
   // <div class="form-edit__bg"></div>
   // метод, который вызывает HTML структуру компонента
   toHTML() {
+    // this.validationForm.returnArrInputs(this.$root)
     return `
             <div class="form-edit visually-hidden">
                 <div class="form-edit__container">
@@ -40,9 +41,9 @@ export class FormEdit extends CrmComponent {
                                 <input class="form-edit__input" type="text">
                             </li>
                         </ul>
-                        <button class="form-edit__form-btn-add">Добавить контакт</button>
+                        <button class="form-edit__form-btn-add" type="button">Добавить контакт</button>
                         <input class="form-edit__form-submit" type="submit" value="Сохранить">
-                        <button class="form-edit__form-btn-delete">Удалить клиента</button>
+                        <button class="form-edit__form-btn-delete" type="button">Удалить клиента</button>
                     </form>
                 </div>
             </div>
@@ -51,7 +52,7 @@ export class FormEdit extends CrmComponent {
 
   // метод для связи с emitter.js
   connectEmitter() {
-    return ''
+    return "";
   }
 
   // события клика
@@ -67,7 +68,9 @@ export class FormEdit extends CrmComponent {
 
   // метод для отправки форсы
   onSubmit(event) {
-    event.preventDefault()
+    event.preventDefault();
+    console.log(1);
+    this.editClient();
   }
 
   // метод закрытия окна редактирования клиента
@@ -78,11 +81,16 @@ export class FormEdit extends CrmComponent {
 
   // метод, который удаляет клиента
   deleteClient() {
-    return ''
+    return "";
   }
 
   // метод редактирования клиента
   editClient() {
-    
+    console.log(this.$root);
+    this.validationForm.checkValueInput(
+      this.validationForm.returnArrInputTypeText(
+        this.algorithms.searchObjTree(this.$root.getChildNodes())
+      )
+    );
   }
 }

@@ -1,3 +1,4 @@
+import { Algorithms } from "../../core/Algorithms.js";
 import { $ } from "../../core/dom.js";
 import { Emitter } from "../../core/Emitter.js";
 import { QueryApi } from "../../core/QueryApi.js";
@@ -7,9 +8,10 @@ export class Crm {
   constructor(selector, options) {
     this.$el = document.getElementById(selector);
     this.components = options.components || [];
-    this.emitter = new Emitter()
-    this.queryApi = new QueryApi()
-    this.validationForm = new ValidationForm()
+    this.emitter = new Emitter();
+    this.queryApi = new QueryApi();
+    this.validationForm = new ValidationForm();
+    this.algorithms = new Algorithms();
   }
 
   // метод инициализации компонентов
@@ -20,11 +22,16 @@ export class Crm {
       emitter: this.emitter,
       queryApi: this.queryApi,
       validationForm: this.validationForm,
-    }
+      algorithms: this.algorithms,
+    };
 
     this.components = this.components.map((Component) => {
       const $el = $.create("div", Component.className);
       const component = new Component($el, componentOptions);
+      // DEBUG
+      // if (component.name) {
+      //   window["c" + component.name] = component;
+      // }
       $el.html(component.toHTML());
       $root.append($el);
       console.log(component);
@@ -43,7 +50,7 @@ export class Crm {
     // инициализируем события
     this.components.forEach((component) => {
       component.init();
-      component.connectEmitter()
+      component.connectEmitter();
     });
   }
 }

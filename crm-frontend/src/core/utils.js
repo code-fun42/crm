@@ -9,5 +9,5 @@ export function strReverse(string) {
   if (typeof string !== "string") {
     return "";
   }
-  return string.split('.').reverse().join('.')
+  return string.split(".").reverse().join(".");
 }

@@ -4,8 +4,10 @@ export class CrmComponent extends DomListener {
   constructor($root, options = {}) {
     super($root, options.listeners);
     this.name = options.name || "";
-    this.emitter = options.emitter;
-    this.queryApi = options.queryApi;
+    this.emitter = options.emitter || false;
+    this.queryApi = options.queryApi || false;
+    this.validationForm = options.validationForm || false;
+    this.algorithms = options.algorithms || false;
   }
 
   toHTML() {
