@@ -112,6 +112,18 @@
     height: 29px;
     border-bottom: 1px solid #c8c5d1;
   }
+
+  .form-add__contacts-list {
+
+  }
+  
+  .form-add__contacts-container {
+    /* width: 100%; */
+    display: flex;
+    padding: 25px 30px 0 30px;
+    min-height: 62px;
+    background-color: #c8c5d1;
+  }
   
   .form-add__form-btn-add {
     margin-bottom: 25px;

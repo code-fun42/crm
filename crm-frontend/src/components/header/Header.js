@@ -21,7 +21,7 @@ export class Header extends CrmComponent {
     <div class="header">
         <div class="header__container">
             <a class="header__link" href="#">
-                <img class="header__logo" src="src/img/header-logo.svg" alt="SKB.">
+                <img class="header__logo" src="src/assets/img/header-logo.svg" alt="SKB.">
             </a>
             <form class="header__form" action="../crm-backend/index.js" method="post">
                 <input class="header__input" type="text" placeholder="Введите запрос">
