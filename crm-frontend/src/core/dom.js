@@ -4,7 +4,6 @@ class Dom {
       typeof selector === "string"
         ? document.querySelector(selector)
         : selector;
-    // this.$$listeners = {}
   }
 
   // метод для работа с html
@@ -81,6 +80,15 @@ class Dom {
     return this;
   }
 
+  // метод по работе с атрибутами
+  attribute(name, value) {
+    if (value) {
+      this.$el.setAttribute(name, value)
+    }
+    return this.$el.getAttribute(name)
+  }
+
+  // метод для получения коллекции ноды с дочерними элементами
   getChildNodes() {
     return this.$el.childNodes;
   }

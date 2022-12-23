@@ -1,7 +1,9 @@
 .form-add {
     position: absolute;
+    overflow-y: scroll;
     top: 0;
     z-index: 1;
+    /* padding: 50px 0; */
     max-width: 100%;
     width: 100%;
     min-height: 100vh;
@@ -9,9 +11,18 @@
     background-color: rgb(20%, 20%, 20%, 0.6);
 }
 
+.form-add__wrap {
+  position: relative;
+  padding: 30px 0;
+  top: 138px;
+}
+
 .form-add__container {
-    position: relative;
-    top: 138px;
+    /* position: relative; */
+    /* overflow: visible; */
+    /* overflow-y: scroll; */
+    /* top: 138px; */
+    bottom: 0;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -112,17 +123,64 @@
     height: 29px;
     border-bottom: 1px solid #c8c5d1;
   }
-
-  .form-add__contacts-list {
-
-  }
   
   .form-add__contacts-container {
     /* width: 100%; */
     display: flex;
     padding: 25px 30px 0 30px;
     min-height: 62px;
-    background-color: #c8c5d1;
+    background-color: rgb(200, 197, 209, 0.2);;
+  }
+
+  .form-add__contacts-list {
+
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .form-add__contacts-item {
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .form-add__contacts-item:not(:last-child) {
+    margin-bottom: 17px;
+  }
+
+  .form-add__contacts-input {
+    padding: 8px 12px;
+    max-width: 100%;
+    width: 100%;
+    /* font-weight: 600;
+font-size: 14px;
+line-height: 19px;
+color: #333333; */
+height: 37px;
+border-top: 1px solid #C8C5D1;
+border-right: 1px solid #C8C5D1;
+border-bottom: 1px solid #C8C5D1;
+outline: none;
+}
+
+.form-add__input::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #B0B0B0;
+}
+
+.form-add__contacts-btn-close {
+  display: flex;
+  height: 37px;
+  min-width: 27px;
+  background-color: #E7E5EB;
+  border-top: 1px solid #C8C5D1;
+  border-right: 1px solid #C8C5D1;
+  border-bottom: 1px solid #C8C5D1;
+  background-image: url('../img/contacts-delete.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
   }
   
   .form-add__form-btn-add {
@@ -132,7 +190,7 @@
     font-size: 14px;
     line-height: 19px;
     color: #333333;
-    background-color: #c8c5d1;
+    background-color: rgb(200, 197, 209, 0.2);;
     background-image: url("../img/form-add-contact.svg");
     background-repeat: no-repeat;
     background-position: 151px center;
